@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Sender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp Sender</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label>رفع ملف CSV:</label>
+            <input type="file" name="csv_file" required>
+            <button type="submit">إرسال</button>
+        </form>
+        {% if status %}
+        <p>{{ status }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
